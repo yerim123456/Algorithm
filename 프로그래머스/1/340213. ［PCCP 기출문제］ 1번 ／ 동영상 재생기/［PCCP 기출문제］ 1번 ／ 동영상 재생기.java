@@ -1,3 +1,6 @@
+// 함수 활용 하기
+// 추가 조건 꼼꼼히 확인해서 주석 작성해두기
+
 class Solution {
     public String solution(String video_len, String pos, String op_start, String op_end, String[] commands) {
         String answer = "";
