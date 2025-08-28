@@ -5,22 +5,21 @@ class Solution {
         Map<Integer, Integer> valueCount = new HashMap<>();   
         
         for(int i : array) {
-            valueCount.put(i, valueCount.getOrDefault(i, 1) + 1);
+            valueCount.put(i, valueCount.getOrDefault(i, 0) + 1);
         }
         
         int bigCount = 0;
-        int answer = 0;
-        for(int i : valueCount.keySet()) {
-            if(bigCount < valueCount.get(i)){
-                bigCount = valueCount.get(i);
-                answer = i;
-            }
-        }
+        int answer = -1;
         
-        
-        for(int i : valueCount.keySet()) {
-            if(bigCount == valueCount.get(i) && answer != i){
-                return -1;
+        for(int key : valueCount.keySet()) {
+            
+            int count = valueCount.get(key);
+            
+            if(bigCount < count){
+                bigCount = count;
+                answer = key;
+            } else if (count == bigCount) {
+                answer = -1;
             }
         }
         
