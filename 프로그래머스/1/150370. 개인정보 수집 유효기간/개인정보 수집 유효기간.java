@@ -84,3 +84,13 @@ class Solution {
 // 반환해야 하는 값과 조건 먼저 살피기!!
 // NotExpired 가 아니라 Expired 반환해야 하는 거였음!!!
 // 그냥 인덱스가 아니라 인덱스 + 1 반환이었음!!!
+
+// 5. 차이를 구해야지 에 집중하기 보다, 어떻게 쉽게 차이를 구해야지 를 고민하기...
+// 다른 사람 풀이 > 
+//     private int getDate(String today) {
+//         String[] date = today.split("\\.");
+//         int year = Integer.parseInt(date[0]);
+//         int month = Integer.parseInt(date[1]);
+//         int day = Integer.parseInt(date[2]);
+//         return (year * 12 * 28) + (month * 28) + day;
+//     }
