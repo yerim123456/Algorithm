@@ -50,4 +50,33 @@ class Solution {
 // Deque 에 대한 개념도 있고, index 의 개념을 계속 스택/큐에 집어넣으려고 해서 돌아간 것
 
 // 알게 된 거 1)
-// Deque 는 큐로 쓸 때 cur 로 poll로 꺼내면 이미 꺼낸 것, 그리고 for문으로 dq 리스트에서 비교하면 이미 뽑아졌기에 그거 빼고 다 비교됨. 그니까 i j 이중 for문 안 쓰고 그냥 바로 각 원소끼리 하나씩 비교해야 하는 알고리즘 그거 할 때 유용할 듯
+// Deque 는 큐로 쓸 때 cur 로 poll로 꺼내면 이미 꺼낸 것, 그리고 for문으로 dq 리스트에서 비교하면 이미 뽑아졌기에 그거 빼고 다 비교됨. 그니까 i j 이중 for문 안 쓰고 그냥 바로 최댓값 탐색 하는 거에 유용한 듯.
+
+// queue 기본 공식
+//  Deque<Integer> dq = new ArrayDeque<>();
+//  
+//  // 초기 세팅
+//  for (int x : arr) dq.offer(x);
+//  
+//  while (!dq.isEmpty()) {
+//      int cur = dq.poll();   // 1. 꺼낸다
+//  
+//      if (조건 만족) {
+//          // 2. 처리
+//      } else {
+//          dq.offer(cur);     // 3. 다시 뒤로 보냄
+//      }
+//  }
+
+
+// stack 기본 공식
+// Deque<Integer> stack = new ArrayDeque<>();
+// 
+// for (int x : arr) {
+// 
+//     while (!stack.isEmpty() && 조건) {
+//         stack.pop();   // 1. 제거
+//     }
+// 
+//     stack.push(x);     // 2. 쌓기
+// }
